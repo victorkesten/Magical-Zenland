@@ -1,0 +1,134 @@
+Hello,
+And welcome to the enrichment center. 
+
+
+Requirements: 
+- Arv, Polymorfi, STL(Standard Library)
+- Public/Private/Const/friends/Virtual
+- Modularized Code. Class/files
+- No Memory Leaks (destructr/Constructors etc)
+- makefile
+- Lambda func/for each/auto m.m
+
+- Make a namespace
+- Skiss the game/game structure.
+- Class hierarchy for Actors
+	-Exempel: en trollkarl är en människa som är en aktör.
+	-Attributes.
+	- Ex Methods
+		- Type()
+		- name()
+		- action()
+		- go(direction)
+		- fight(Characer)
+		- pick_up(object)
+		- drop(Object)
+		- talk_to(character)
+- Class hierarchy for Environments
+- Class hierarchy for Items
+
+Classes:
+- Main
+// Parses System.in (cin)
+- Parser
+
+//Contains all Player data. I.e what Actor he is, items he carried etc. 
+// Can save this to a text file. Save Data.
+- Player
+
+// Instancizes all Game assets. (Actors/Environment/Items)
+- GameMain
+- ActorsMain
+	- Actors
+		-
+- EnvironmentsMain
+	- Environments
+- ItemsMain
+	- Items
+
+// Locked door.
+// Unlocked areas. Achieve X to unlock area.
+
+
+
+															 -----------
+															|	HQ F2	|
+															 -----------
+
+																 UP
+
+															 -----------
+															|	 HQ F1	|
+															 -----------
+															 	south
+									---------				 -----------        -----------
+									|Gardens W| 	west	|  Gardens  | east | Waterfall |
+									---------				 -----------        -----------
+
+
+
+
+
+
+
+
+
+
+
+//VALGRIND ISSUES
+
+Pickup test (when picking up wrong item);
+VALGRIND FIXED WHEN NOT ALLOCATE ROOM IN BEGINNING OF PLAYER. 
+
+
+- getStats() <-- Player
+	- Add multiple statistics.
+- Add actor class
+	- Actor -> Human -> Wizard
+	- Actor -> Human -> Civilian
+	- Actor -> Dragon
+	- Actor -> Troll -> Wizard
+- Each actor have unique identifinder
+	- Future expansion
+		- Read from text file, their lines.
+		- Hardcode their specific lines of text. say what
+
+- Add a Vector of available Actors ine ach room. Vector<Character *>
+- Each turn, iterate over cetor and let each actor do their action();
+- Add fights with actors. 
+	- Roll a dice based on statistics.
+
+
+Before Redovisning
+-> Explain minnesalokering. 
+-> m/ake a brief UML
+-> Leak memory? Play with valgrind.
+-> Read only methods const?
+-> Explain class hierarchy.
+-> 
+
+- Fix Actor class
+- Add like.. 3 actors to the game. 
+	- Wizard in HQ
+		- Interact -Fully heal.
+	- Monster in Forest
+		- Fight
+			- Dice. Rand who wins. Damage.
+	- Civillian in Waterfall
+		- Talk/give item. Health increase
+- Vector of Actors
+- Make them move around. 
+	- Wizard from floor 1 to 2.
+	- Civillian still.
+	- Monster between forest. 
+
+- Clean code. 
+
+
+
+------
+Room * currentPosition. <-- delete? In player.hpp
+
+
+
+Extras:
